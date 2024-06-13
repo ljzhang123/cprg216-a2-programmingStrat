@@ -27,8 +27,13 @@ print total profit
 
 # Part 2 pseudo code
 
-Code in part 1 will be represented as dailyProfit()
+Code in part 1 will be represented as 
+```
+dailyProfit()
+```
+
 Checking if inputs (are suppose be numbers) are numbers **is not included** in pseudo code
+
 ```
 print intro message
 get timePeriodSelection
