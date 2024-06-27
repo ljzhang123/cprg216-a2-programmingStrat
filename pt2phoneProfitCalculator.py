@@ -8,7 +8,6 @@ def dailyProfit():
                     5:51.49} #windows tablet
     totalProfit = 0
 
-
     #get product category input
     categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
@@ -43,16 +42,32 @@ def dailyProfit():
   
 
 #print intro message
-print("Welcome to Circle Phones’ Profit calculator.")
-print("")
-timePeriodSelection = input("""You can calculate the profit of the company according to a specific day or by a week or divide the week into weekdays and weekend
+print("Welcome to Circle Phones’ Profit calculator.\n")
+timePeriodSelection = int(input("""You can calculate the profit of the company according to a specific day or by a week or divide the week into weekdays and weekend
 
 Enter:
 1 - For specific Day
 2 - For the Week
 3 - For Week Business Days
 4 - For Weekend days
-0 - Exit \n""")
+0 - Exit \n"""))
+
+while timePeriodSelection != 0:
+    if timePeriodSelection not in (0, 1, 2, 3, 4):
+        print('Invalid input, please enter a valid input')
+        continue
+
+    if timePeriodSelection == 1:
+        continue
+
+    elif timePeriodSelection == 2:
+        continue
+
+    elif timePeriodSelection == 3:
+        continue
+
+    elif timePeriodSelection == 4:
+        continue
 
 
-#this is my part theto
+print('Program End!')
