@@ -42,6 +42,7 @@ while timePeriodSelection != 0
         print error message 
         continue
     
+    #theto part start
     if timePeriodSelection is 0
         break
     
@@ -57,6 +58,10 @@ while timePeriodSelection != 0
             add to total profit of previous days
         print total profit
 
+        #theto part end
+
+
+    #ethan part start
     elif timePeriodSelection is 3
         for day in weekdays
             dailyProfit()
@@ -76,3 +81,5 @@ while timePeriodSelection != 0
 
 print program end
 ```
+
+#ethan part end
