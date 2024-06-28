@@ -117,11 +117,11 @@ while True:
         print(f"Your total profit for {day} is: ${totalProfit:.2f}") # Theto Edited this part to match the output of part 2
         print("More hard work needed... The last Monday wasn't the best") #this is new
 
-# Theto ended here if user chose 1          
+# Theto ended here if user choose 1          
 
     elif timePeriodSelection == 2:
         
-# Theto started here if user chose 2 
+# Theto started here if user choose 2 
     
         # if the user choose number 2
         count = 0
@@ -179,7 +179,7 @@ while True:
         print(f"Your total profit for {day} is: ${totalProfit:.2f}") # Edited this part to match the output of part 2
         print("You did good this week") #this is new
 
-# Theto started here if user chose 2 
+# Theto ended here if user choose 2 
 
     elif timePeriodSelection == 3:
         continue
