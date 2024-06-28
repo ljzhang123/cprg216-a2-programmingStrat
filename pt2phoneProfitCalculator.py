@@ -67,16 +67,17 @@ while True:
         break
 
     if timePeriodSelection == 1:
-     # if the user choose number 1
+        days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 
         # input and testing an inputed day if Monday to Sunday
         day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()    
-        while day not in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'):
-                print("That's not a valid day")
-                day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
-
+        while day not in days:
+            print("That's not a valid day")
+            day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
+        print(f'For {day}')
 
         dailyProfit = 0
+        categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         while categoryInput != 0:
         #error message for invalid input
@@ -104,35 +105,26 @@ while True:
                     profit = productCategory[5] * quantityInput
                     dailyProfit += profit
         #continue to ask for product category
-        categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
+            categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         #print total
         print(f"Your total profit for {day} is: ${dailyProfit:.2f}") # Theto Edited this part to match the output of part 2
-        print("More hard work needed... The last Monday wasn't the best") #this is new         
+        if dailyProfit >= 10000:
+            print(f'You did well this past {day}! Keep up the great work!')
+        else:
+            print(f'We didn’t reach our goal for this past {day}. More work is needed.')    
 
     elif timePeriodSelection == 2:
         # if the user choose number 2
-        count = 0
-        dailyProfit = 0
-        while count != 7:   # count 7 times for Monday - Sunday
-            count = count+1
-   
-            # input and testing an inputed day if Monday to Sunday
-            day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
-            while day not in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'):
-                print("That's not a valid day")
-                day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
+        weeklyProfit = 0
+        week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for day in week:   # count 7 times for Monday - Sunday
+            print(f'For {day}')
 
-
-            else:
-                print(f'For {day}')
-
-            # The following is from part 1
-
-            #get product category input
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
             while categoryInput != 0:
+                dailyProfit = 0
             #error message for invalid input
                 if categoryInput not in (0,1,2,3,4,5):
                     print("Invalid input, please enter a valid number.")
@@ -157,12 +149,16 @@ while True:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[5] * quantityInput
                         dailyProfit += profit
+                weeklyProfit += dailyProfit
                 #continue to ask for product category
                 categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         #print total
         print(f"Your total profit for {day} is: ${dailyProfit:.2f}") # Edited this part to match the output of part 2
-        print("You did good this week") #this is new
+        if weeklyProfit >= 10000:
+            print('You did well this week! Keep up the great work!')
+        else:
+            print('We didn’t reach our goal for this week. More work is needed.')
 
     elif timePeriodSelection == 3:
         weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
@@ -209,7 +205,7 @@ while True:
         if weekendsProfit >= 10000:
             print('You did well this week (business days)! Keep up the great work!')
         else:
-            print('We didn\’t reach our goal for this week (business days). More work is needed.')
+            print('We didn’t reach our goal for this week (business days). More work is needed.')
 
 
     elif timePeriodSelection == 4:
