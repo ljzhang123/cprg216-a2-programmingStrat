@@ -207,9 +207,13 @@ while True:
 
                 categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
-
             weekdaysProfit += dailyProfit
-        print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
+
+        print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
+        if weekendsProfit >= 10000:
+            print('You did well this week (business days)! Keep up the great work!')
+        else:
+            print('We didn\’t reach our goal for this week (business days). More work is needed.')
 
 
     elif timePeriodSelection == 4:
@@ -251,6 +255,11 @@ while True:
                 categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))        
 
             weekendsProfit += dailyProfit
-        print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
+        print(f"Total Profit for the weekend is: ${weekendsProfit}")
+
+        if weekendsProfit >= 10000:
+            print('You did well this weekend! Keep up the great work!')
+        else:
+            print('We didn’t reach our goal for this weekend. More work is needed.')
 
 print('Program End!')
