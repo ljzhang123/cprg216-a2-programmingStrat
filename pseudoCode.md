@@ -75,9 +75,9 @@ while timePeriodSelection != 0
         print total profit
 
     if totalProfit >= $10,000
-        print good job
+        print “You did well this period! Keep up the great work!”
     elif totalProfit < $10,000
-        print you trash
+        print “We didn’t reach our goal for this period. More work is needed.”
 
 print program end
 ```
