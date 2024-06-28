@@ -58,62 +58,30 @@ while True:
             elif categoryInput == 0:
                 break
             # TODO: snippet end
-            else:              
+            else:    
+                quantityInput = input("Enter quantity sold: \n")
+                if quantityInput.isdigit():
+                    quantityInput = int(quantityInput)
+                else:
+                    print('Please enter a valid digit')
+                    continue
+
                 if categoryInput ==  1:
-                    quantityInput = input("Enter quantity sold: \n")
-
-                    if quantityInput.isdigit():
-                        quantityInput = int(quantityInput)
-                    else:
-                        print('Please enter a valid digit')
-                        continue
-
                     profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
                     dailyProfit += profit #add the profit to the total amount of profit
                 elif categoryInput == 2:
-                    quantityInput = input("Enter quantity sold: \n")
-
-                    if quantityInput.isdigit():
-                        quantityInput = int(quantityInput)
-                    else:
-                        print('Please enter a valid digit')
-                        continue
-
                     profit = productCategory[2] * quantityInput
                     dailyProfit += profit
                 elif categoryInput == 3:
-                    quantityInput = input("Enter quantity sold: \n")
-
-                    if quantityInput.isdigit():
-                        quantityInput = int(quantityInput)
-                    else:
-                        print('Please enter a valid digit')
-                        continue
-
                     profit = productCategory[3] * quantityInput
                     dailyProfit += profit
                 elif categoryInput == 4:
-                    quantityInput = input("Enter quantity sold: \n")
-
-                    if quantityInput.isdigit():
-                        quantityInput = int(quantityInput)
-                    else:
-                        print('Please enter a valid digit')
-                        continue
-
                     profit = productCategory[4] * quantityInput
                     dailyProfit += profit
                 elif categoryInput == 5:
-                    quantityInput = input("Enter quantity sold: \n")
-
-                    if quantityInput.isdigit():
-                        quantityInput = int(quantityInput)
-                    else:
-                        print('Please enter a valid digit')
-                        continue
-
                     profit = productCategory[5] * quantityInput
                     dailyProfit += profit
+                    
         #continue to ask for product category
 
         #print total
