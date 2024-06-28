@@ -83,7 +83,7 @@ while True:
                             5:51.49} #windows tablet
 
         #get product category input
-        categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
+        categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         while categoryInput != 0:
         #error message for invalid input
@@ -91,27 +91,27 @@ while True:
                 print("Invalid input, please enter a valid number.")
             else:              
                 if categoryInput ==  1:
-                    quantityInput = float(input("Enter quantity sold: \n"))
+                    quantityInput = int(input("Enter quantity sold: \n"))
                     profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
                     totalProfit += profit #add the profit to the total amount of profit
                 elif categoryInput == 2:
-                    quantityInput = float(input("Enter quantity sold: \n"))
+                    quantityInput = int(input("Enter quantity sold: \n"))
                     profit = productCategory[2] * quantityInput
                     totalProfit += profit
                 elif categoryInput == 3:
-                    quantityInput = float(input("Enter quantity sold: \n"))
+                    quantityInput = int(input("Enter quantity sold: \n"))
                     profit = productCategory[3] * quantityInput
                     totalProfit += profit
                 elif categoryInput == 4:
-                    quantityInput = float(input("Enter quantity sold: \n"))
+                    quantityInput = int(input("Enter quantity sold: \n"))
                     profit = productCategory[4] * quantityInput
                     totalProfit += profit
                 elif categoryInput == 5:
-                    quantityInput = float(input("Enter quantity sold: \n"))
+                    quantityInput = int(input("Enter quantity sold: \n"))
                     profit = productCategory[5] * quantityInput
                     totalProfit += profit
         #continue to ask for product category
-        categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
+        categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         #print total
         print(f"Your total profit for {day} is: ${totalProfit:.2f}") # Theto Edited this part to match the output of part 2
