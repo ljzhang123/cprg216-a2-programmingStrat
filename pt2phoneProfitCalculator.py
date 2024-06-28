@@ -62,7 +62,7 @@ while True:
 
     if timePeriodSelection == 1:
 
-# Theto started here if user chose 1 
+# Theto started here if user choose 1 
 
         # if the user choose number 1
 
@@ -110,8 +110,8 @@ while True:
                     quantityInput = float(input("Enter quantity sold: \n"))
                     profit = productCategory[5] * quantityInput
                     totalProfit += profit
-        #continue to ask for product category
-        categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
+            #continue to ask for product category
+            categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
         #print total
         print(f"Your total profit for {day} is: ${totalProfit:.2f}") # Theto Edited this part to match the output of part 2
@@ -120,7 +120,66 @@ while True:
 # Theto ended here if user chose 1          
 
     elif timePeriodSelection == 2:
-        continue
+        
+# Theto started here if user chose 2 
+    
+        # if the user choose number 2
+        count = 0
+        totalProfit = 0
+        while count != 7:   # count 7 times for Monday - Sunday
+            count = count+1
+   
+            # input and testing an inputed day if Monday to Sunday
+            x = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]')
+            day = x.capitalize()
+            print(f'For {day}')
+
+            # The following is from part 1
+
+
+            #creating a dictionary for product categories & profit margins
+            productCategory = {1:120.45, #apple iphone
+                               2:99.50, #android phone
+                               3:75.69, #apple tablet
+                               4:65.73, #android tablet
+                               5:51.49} #windows tablet
+
+            #get product category input
+            categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
+
+            while categoryInput != 0:
+            #error message for invalid input
+                if categoryInput not in (0,1,2,3,4,5):
+                    print("Invalid input, please enter a valid number.")
+                else:
+                    if categoryInput ==  1:
+                        quantityInput = float(input("Enter quantity sold: \n"))
+                        profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
+                        totalProfit += profit #add the profit to the total amount of profit
+                    elif categoryInput == 2:
+                        quantityInput = float(input("Enter quantity sold: \n"))
+                        profit = productCategory[2] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 3:
+                        quantityInput = float(input("Enter quantity sold: \n"))
+                        profit = productCategory[3] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 4:
+                        quantityInput = float(input("Enter quantity sold: \n"))
+                        profit = productCategory[4] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 5:
+                        quantityInput = float(input("Enter quantity sold: \n"))
+                        profit = productCategory[5] * quantityInput
+                        totalProfit += profit
+                #continue to ask for product category
+                categoryInput = float(input("Enter product number 1-5, or enter 0 to stop: \n"))
+
+        #print total
+        print(f"Your total profit for {day} is: ${totalProfit:.2f}") # Edited this part to match the output of part 2
+        print("You did good this week") #this is new
+
+# Theto started here if user chose 2 
 
     elif timePeriodSelection == 3:
         continue
