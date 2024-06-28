@@ -185,7 +185,7 @@ while True:
         weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         weekdaysProfit = 0
         for day in weekdays:
-            print(day)
+            print(f"For {day}")
             
             #print("For",day)
 
@@ -227,13 +227,59 @@ while True:
                     profit = productCategory[5] * quantityInput
                     totalProfit += profit           
 
-            totalProfit += profit
-        print(f"Total Profit for the week (business days) is: ${totalProfit}")
+            weekdaysProfit += totalProfit
+        print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
 
 
 
     elif timePeriodSelection == 4:
-        continue
+        weekends = ["Saturday", "Sunday"]
+        weekendsProfit = 0
+        for day in weekends:
+            print(f"For {day}")
+            
+            #print("For",day)
+
+
+
+            #creating a dictionary for product categories & profit margins
+            productCategory = {1:120.45, #apple iphone
+                    2:99.50, #android phone
+                    3:75.69, #apple tablet
+                    4:65.73, #android tablet
+                    5:51.49} #windows tablet
+            totalProfit = 0
+
+             #get product category input
+            categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
+
+
+            if categoryInput not in (0,1,2,3,4,5):
+                print("Invalid input, please enter a valid number.")
+            else:
+                if categoryInput ==  1:
+                    quantityInput = int(input("Enter quantity sold: \n"))
+                    profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
+                    totalProfit += profit #add the profit to the total amount of profit
+                elif categoryInput == 2:
+                    quantityInput = int(input("Enter quantity sold: \n"))
+                    profit = productCategory[2] * quantityInput
+                    totalProfit += profit
+                elif categoryInput == 3:
+                    quantityInput = int(input("Enter quantity sold: \n"))
+                    profit = productCategory[3] * quantityInput
+                    totalProfit += profit
+                elif categoryInput == 4:
+                    quantityInput = int(input("Enter quantity sold: \n"))
+                    profit = productCategory[4] * quantityInput
+                    totalProfit += profit
+                elif categoryInput == 5:
+                    quantityInput = int(input("Enter quantity sold: \n"))
+                    profit = productCategory[5] * quantityInput
+                    totalProfit += profit           
+
+            weekendsProfit += totalProfit
+        print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
 
 
 print('Program End!')
