@@ -205,6 +205,9 @@ while True:
                         profit = productCategory[5] * quantityInput
                         dailyProfit += profit
 
+                categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
+
+
             weekdaysProfit += dailyProfit
         print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
 
@@ -244,7 +247,8 @@ while True:
                     elif categoryInput == 5:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[5] * quantityInput
-                        dailyProfit += profit           
+                        dailyProfit += profit   
+                categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))        
 
             weekendsProfit += dailyProfit
         print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
