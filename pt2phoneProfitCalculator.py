@@ -120,9 +120,14 @@ while True:
             count = count+1
    
             # input and testing an inputed day if Monday to Sunday
-            x = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]')
-            day = x.capitalize()
-            print(f'For {day}')
+            day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
+            while day not in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'):
+                print("That's not a valid day")
+                day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
+
+
+            else:
+                print(f'For {day}')
 
             # The following is from part 1
 
