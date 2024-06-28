@@ -182,7 +182,15 @@ while True:
 # Theto ended here if user choose 2 
 
     elif timePeriodSelection == 3:
-        continue
+        weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        for day in weekdays:
+            weekdaysProfit = 0
+            print("For",day)
+            dailyProfit() #replace with function content/remove function
+            weekdaysProfit += dailyProfit
+        print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
+
+
 
     elif timePeriodSelection == 4:
         continue
