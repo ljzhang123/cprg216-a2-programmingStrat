@@ -185,7 +185,7 @@ while True:
         weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         weekdaysProfit = 0
         for day in weekdays:
-            print(day)
+            print(f"For {day}")
             
             #print("For",day)
 
