@@ -173,8 +173,6 @@ while True:
         weekdaysProfit = 0
         for day in weekdays:
             print(f"For {day}")
-            
-            #print("For",day)
 
             dailyProfit = 0
 
@@ -189,23 +187,23 @@ while True:
                     if categoryInput ==  1:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
-                        totalProfit += profit #add the profit to the total amount of profit
+                        dailyProfit += profit #add the profit to the total amount of profit
                     elif categoryInput == 2:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[2] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 3:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[3] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 4:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[4] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 5:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[5] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
 
             weekdaysProfit += dailyProfit
         print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
@@ -217,8 +215,6 @@ while True:
         for day in weekends:
             print(f"For {day}")
             
-            #print("For",day)
-            
             dailyProfit = 0
 
              #get product category input
@@ -232,27 +228,25 @@ while True:
                     if categoryInput ==  1:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
-                        totalProfit += profit #add the profit to the total amount of profit
+                        dailyProfit += profit #add the profit to the total amount of profit
                     elif categoryInput == 2:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[2] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 3:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[3] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 4:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[4] * quantityInput
-                        totalProfit += profit
+                        dailyProfit += profit
                     elif categoryInput == 5:
                         quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[5] * quantityInput
-                        totalProfit += profit           
+                        dailyProfit += profit           
 
             weekendsProfit += dailyProfit
         print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
-
-    
 
 print('Program End!')
