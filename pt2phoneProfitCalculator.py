@@ -202,30 +202,32 @@ while True:
              #get product category input
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
-
-            if categoryInput not in (0,1,2,3,4,5):
-                print("Invalid input, please enter a valid number.")
-            else:
-                if categoryInput ==  1:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
-                    totalProfit += profit #add the profit to the total amount of profit
-                elif categoryInput == 2:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[2] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 3:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[3] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 4:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[4] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 5:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[5] * quantityInput
-                    totalProfit += profit           
+            while categoryInput != 0: 
+            #error message for invalid input
+                if categoryInput not in (0,1,2,3,4,5):
+                    print("Invalid input, please enter a valid number.")
+                else:
+                    if categoryInput ==  1:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
+                        totalProfit += profit #add the profit to the total amount of profit
+                    elif categoryInput == 2:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[2] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 3:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[3] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 4:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[4] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 5:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[5] * quantityInput
+                        totalProfit += profit
+                 
 
             weekdaysProfit += totalProfit
         print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
@@ -253,30 +255,31 @@ while True:
              #get product category input
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
-
-            if categoryInput not in (0,1,2,3,4,5):
-                print("Invalid input, please enter a valid number.")
-            else:
-                if categoryInput ==  1:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
-                    totalProfit += profit #add the profit to the total amount of profit
-                elif categoryInput == 2:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[2] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 3:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[3] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 4:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[4] * quantityInput
-                    totalProfit += profit
-                elif categoryInput == 5:
-                    quantityInput = int(input("Enter quantity sold: \n"))
-                    profit = productCategory[5] * quantityInput
-                    totalProfit += profit           
+            while categoryInput != 0: 
+            #error message for invalid input
+                if categoryInput not in (0,1,2,3,4,5):
+                    print("Invalid input, please enter a valid number.")
+                else:
+                    if categoryInput ==  1:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
+                        totalProfit += profit #add the profit to the total amount of profit
+                    elif categoryInput == 2:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[2] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 3:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[3] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 4:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[4] * quantityInput
+                        totalProfit += profit
+                    elif categoryInput == 5:
+                        quantityInput = int(input("Enter quantity sold: \n"))
+                        profit = productCategory[5] * quantityInput
+                        totalProfit += profit           
 
             weekendsProfit += totalProfit
         print(f"Total Profit for the week (business days) is: ${weekendsProfit}")
