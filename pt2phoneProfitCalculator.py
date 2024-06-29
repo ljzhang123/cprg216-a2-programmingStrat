@@ -22,6 +22,7 @@ while True:
     if timePeriodSelection.isdigit():
         timePeriodSelection = int(timePeriodSelection)
     else:
+        print('Please enter a valid digit')
         continue
     
     if timePeriodSelection not in (0, 1, 2, 3, 4):
@@ -35,16 +36,16 @@ while True:
         days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 
         # input and testing an inputed day if Monday to Sunday
-        day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()    
+        day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()    
         while day not in days:
             print("That's not a valid day")
-            day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]').capitalize()
+            day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()
         print(f'For {day}')
 
         dailyProfit = 0
 
-        while categoryInput == True:
-            # TODO: snippet start
+        # TODO: snippet start
+        while True:
             categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
 
             if categoryInput.isdigit():
@@ -55,20 +56,21 @@ while True:
 
             if categoryInput not in (0,1,2,3,4,5):
                 print("Invalid input, please enter a valid number.")
+
             elif categoryInput == 0:
                 break
-            # TODO: snippet end
+
             else:    
                 quantityInput = input("Enter quantity sold: \n")
-                if quantityInput.isdigit():
-                    quantityInput = int(quantityInput)
-                else:
+                while quantityInput.isdigit() == False:
                     print('Please enter a valid digit')
-                    continue
+                    quantityInput = input("Enter quantity sold: \n")
+
+                quantityInput = int(quantityInput)
 
                 if categoryInput ==  1:
-                    profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
-                    dailyProfit += profit #add the profit to the total amount of profit
+                    profit = productCategory[1] * quantityInput 
+                    dailyProfit += profit 
                 elif categoryInput == 2:
                     profit = productCategory[2] * quantityInput
                     dailyProfit += profit
@@ -81,11 +83,10 @@ while True:
                 elif categoryInput == 5:
                     profit = productCategory[5] * quantityInput
                     dailyProfit += profit
-                    
-        #continue to ask for product category
+        # TODO: snippet end
 
         #print total
-        print(f"Your total profit for {day} is: ${dailyProfit:.2f}") # Theto Edited this part to match the output of part 2
+        print(f"Your total profit for {day} is: ${dailyProfit:.2f}")
         if dailyProfit >= 10000:
             print(f'You did well this past {day}! Keep up the great work!')
         else:
