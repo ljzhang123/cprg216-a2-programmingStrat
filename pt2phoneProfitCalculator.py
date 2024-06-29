@@ -93,17 +93,20 @@ while True:
             print(f'We didn’t reach our goal for this past {day}. More work is needed.')    
 
     elif timePeriodSelection == 2:
-        # if the user choose number 2
         weeklyProfit = 0
         week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-        for day in week:   # count 7 times for Monday - Sunday
+
+        for day in week:
             print(f'For {day}')
 
+            # FIXME: remove int casting, move to beginning of while loop
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
+            dailyProfit = 0
+
+            # FIXME: refer to line 47-86 and change the contents of this while loop to match
+            #        be mindful of the total profit variable (i.e. weeklyProfit, weekdaysProfit etc)
             while categoryInput != 0:
-                dailyProfit = 0
-            #error message for invalid input
                 if categoryInput not in (0,1,2,3,4,5):
                     print("Invalid input, please enter a valid number.")
                 else:
@@ -128,11 +131,10 @@ while True:
                         profit = productCategory[5] * quantityInput
                         dailyProfit += profit
                 weeklyProfit += dailyProfit
-                #continue to ask for product category
                 categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
-        #print total
-        print(f"Your total profit for {day} is: ${dailyProfit:.2f}") # Edited this part to match the output of part 2
+        # print total
+        print(f"Your total profit for {day} is: ${dailyProfit:.2f}") 
         if weeklyProfit >= 10000:
             print('You did well this week! Keep up the great work!')
         else:
@@ -146,9 +148,11 @@ while True:
 
             dailyProfit = 0
 
-             #get product category input
+            # FIXME: remove int casting, move to beginning of while loop
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
+            # FIXME: refer to line 47-86 and change the contents of this while loop to match
+            #        be mindful of the total profit variable (i.e. weeklyProfit, weekdaysProfit etc)
             while categoryInput != 0: 
             #error message for invalid input
                 if categoryInput not in (0,1,2,3,4,5):
@@ -194,9 +198,11 @@ while True:
             
             dailyProfit = 0
 
-             #get product category input
+            # FIXME: remove int casting, move to beginning of while loop
             categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
+            # FIXME: refer to line 47-86 and change the contents of this while loop to match
+            #        be mindful of the total profit variable (i.e. weeklyProfit, weekdaysProfit etc)
             while categoryInput != 0: 
             #error message for invalid input
                 if categoryInput not in (0,1,2,3,4,5):
