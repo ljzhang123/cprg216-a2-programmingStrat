@@ -217,39 +217,51 @@ while True:
             
             dailyProfit = 0
 
-            # FIXME: remove int casting, move to beginning of while loop
-            categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))
 
             # FIXME: refer to line 47-86 and change the contents of this while loop to match
             #        be mindful of the total profit variable (i.e. weeklyProfit, weekdaysProfit etc)
-            while categoryInput != 0: 
-            #error message for invalid input
+            while True: 
+                categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
+                
+                if categoryInput.isdigit():
+                    categoryInput = int(categoryInput)
+                else:
+                    print('Please enter a valid digit')
+                    continue
+
+                #error message for invalid input
                 if categoryInput not in (0,1,2,3,4,5):
                     print("Invalid input, please enter a valid number.")
+
+                elif categoryInput == 0:
+                    break
+                
                 else:
+                    quantityInput = input("Enter quantity sold: \n")
+                    while quantityInput.isdigit() == False:
+                        print('Please enter a valid digit')
+                        quantityInput = input("Enter quantity sold: \n")
+
+                    quantityInput = int(quantityInput)
+
                     if categoryInput ==  1:
-                        quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[1] * quantityInput #access the value in the dictionary by using the key
                         dailyProfit += profit #add the profit to the total amount of profit
                     elif categoryInput == 2:
-                        quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[2] * quantityInput
                         dailyProfit += profit
                     elif categoryInput == 3:
-                        quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[3] * quantityInput
                         dailyProfit += profit
                     elif categoryInput == 4:
-                        quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[4] * quantityInput
                         dailyProfit += profit
                     elif categoryInput == 5:
-                        quantityInput = int(input("Enter quantity sold: \n"))
                         profit = productCategory[5] * quantityInput
                         dailyProfit += profit   
-                categoryInput = int(input("Enter product number 1-5, or enter 0 to stop: \n"))        
 
             weekendsProfit += dailyProfit
+            
         print(f"Total Profit for the weekend is: ${weekendsProfit}")
 
         if weekendsProfit >= 10000:
