@@ -36,7 +36,7 @@ while True:
         days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 
         # input and testing an inputed day if Monday to Sunday
-        day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()    
+        day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()   
         while day not in days:
             print("That's not a valid day")
             day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()
@@ -86,7 +86,7 @@ while True:
         # TODO: snippet end
 
         #print total
-        print(f"Your total profit for {day} is: ${dailyProfit:.2f}")
+        print(f"Total profit for the {day} is: ${dailyProfit:.2f}")
         if dailyProfit >= 10000:
             print(f'You did well this past {day}! Keep up the great work!')
         else:
@@ -144,15 +144,16 @@ while True:
             weeklyProfit += dailyProfit
             
         # print total
-        print(f"Your total profit for the week is: ${weeklyProfit:.2f}") 
+        print(f"Total profit for the week is: ${weeklyProfit:.2f}") 
         if weeklyProfit >= 10000:
             print('You did good this week')
         else:
             print('We didn’t reach our goal for this week. More work is needed.')
 
     elif timePeriodSelection == 3:
-        weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         weekdaysProfit = 0
+        weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        
         for day in weekdays:
             print(f"For {day}")
 
@@ -210,16 +211,14 @@ while True:
 
 
     elif timePeriodSelection == 4:
-        weekends = ["Saturday", "Sunday"]
         weekendsProfit = 0
+        weekends = ["Saturday", "Sunday"]
+        
         for day in weekends:
             print(f"For {day}")
             
             dailyProfit = 0
 
-
-            # FIXME: refer to line 47-86 and change the contents of this while loop to match
-            #        be mindful of the total profit variable (i.e. weeklyProfit, weekdaysProfit etc)
             while True: 
                 categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
                 
