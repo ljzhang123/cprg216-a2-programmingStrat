@@ -90,7 +90,7 @@ while True:
         if dailyProfit >= 10000:
             print(f'You did well this past {day}! Keep up the great work!')
         else:
-            print(f'We didn’t reach our goal for this past {day}. More work is needed.')    
+            print(f"More hard work needed... The last {day} wasn't the best")
 
     elif timePeriodSelection == 2:
         weeklyProfit = 0
@@ -146,7 +146,7 @@ while True:
         # print total
         print(f"Your total profit for the week is: ${weeklyProfit:.2f}") 
         if weeklyProfit >= 10000:
-            print('You did well this week! Keep up the great work!')
+            print('You did good this week')
         else:
             print('We didn’t reach our goal for this week. More work is needed.')
 
@@ -202,9 +202,9 @@ while True:
 
             weekdaysProfit += dailyProfit
 
-        print(f"Total Profit for the week (business days) is: ${weekdaysProfit}")
+        print(f"Total Profit for the week (business days) is: ${weekdaysProfit:.2f}")
         if weekdaysProfit >= 10000:
-            print('You did well this week (business days)! Keep up the great work!')
+            print('You did good this week (business days)')
         else:
             print('We didn’t reach our goal for this week (business days). More work is needed.')
 
@@ -262,10 +262,10 @@ while True:
 
             weekendsProfit += dailyProfit
             
-        print(f"Total Profit for the weekend is: ${weekendsProfit}")
+        print(f"Total Profit for the weekend is: ${weekendsProfit:.2f}")
 
         if weekendsProfit >= 10000:
-            print('You did well this weekend! Keep up the great work!')
+            print('You did good this weekend')
         else:
             print('We didn’t reach our goal for this weekend. More work is needed.')
 
