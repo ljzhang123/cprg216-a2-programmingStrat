@@ -19,6 +19,7 @@ while True:
     4 - For Weekend days
     0 - Exit \n""")
 
+    # Check if user input is a digit before casting into int
     if timePeriodSelection.isdigit():
         timePeriodSelection = int(timePeriodSelection)
     else:
@@ -35,7 +36,7 @@ while True:
     if timePeriodSelection == 1:
         days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 
-        # input and testing an inputed day if Monday to Sunday
+        # input and testing an inputed day if Monday to Sunday, convert all with capitalize() to accept all lowercase and uppercase scenarios
         day = input('Enter a specific day [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n').capitalize()   
         while day not in days:
             print("That's not a valid day")
@@ -44,6 +45,7 @@ while True:
 
         dailyProfit = 0
 
+        # part1 logic, calculates the daily profit
         # TODO: snippet start
         while True:
             categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
@@ -101,7 +103,7 @@ while True:
 
             dailyProfit = 0
 
-
+            # part1 logic, calculates the daily profit
             while True:
                 categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
                 
@@ -159,7 +161,7 @@ while True:
 
             dailyProfit = 0
 
-
+            # part1 logic, calculates the daily profit
             while True: 
                 categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
 
@@ -219,6 +221,7 @@ while True:
             
             dailyProfit = 0
 
+            # part1 logic, calculates the daily profit
             while True: 
                 categoryInput = input("Enter product number 1-5, or enter 0 to stop: \n")
                 
