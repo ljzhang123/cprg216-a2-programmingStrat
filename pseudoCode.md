@@ -60,8 +60,6 @@ while timePeriodSelection != 0
 
         #theto part end
 
-
-    #ethan part start
     elif timePeriodSelection is 3
         for day in weekdays
             dailyProfit()
@@ -81,5 +79,3 @@ while timePeriodSelection != 0
 
 print program end
 ```
-
-#ethan part end     
